@@ -1,9 +1,12 @@
 #!/bin/sh
 # Publish a Leaf beta release to the Leaf-beta repo.
 #
-# Guarantees the two things every beta release MUST have:
-#   1. the tester-only banner (RELEASE_NOTES_HEADER.md) prepended to the notes, and
-#   2. the GitHub release marked --prerelease (never "Latest").
+# Guarantees the tester-only banner (RELEASE_NOTES_HEADER.md) is prepended to the
+# notes. Beta releases are published as REGULAR (non-prerelease) releases: the
+# whole Leaf-beta repo is the beta channel, and Leaf's in-app update check skips
+# anything flagged prerelease — so a beta must be a normal release to be offered
+# to users on the Beta channel. The repo + banner are what mark it as a tester
+# build, not the GitHub prerelease flag.
 #
 # Usage:
 #   scripts/publish-beta.sh <tag> "<title>" <notes-file> <artifact> [artifact...]
@@ -33,7 +36,6 @@ cat "$HEADER" "$notes" > "$tmp"
 
 gh release create "$tag" \
     --repo "$REPO" \
-    --prerelease \
     --title "$title" \
     --notes-file "$tmp" \
     "$@"
