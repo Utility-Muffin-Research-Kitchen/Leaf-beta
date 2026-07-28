@@ -26,11 +26,11 @@ Beta builds use tags `vX.Y.Z-beta.N` (for example `v0.5.0-beta.1`), where
 `X.Y.Z-beta.N` remains visible on-device, while compatibility checks use the
 `X.Y.Z` core.
 
-Builds here are published as regular GitHub releases—not GitHub
-**Pre-releases**—because Leaf's updater skips prerelease-flagged releases. The
-newest beta is **Latest** within this dedicated tester repository; it is not a
-stable Leaf release. The device's update-channel setting selects the stable or
-beta repository.
+Builds here are published as regular GitHub releases rather than GitHub
+**Pre-releases**, because Leaf's updater skips anything flagged as a prerelease.
+The newest beta therefore carries **Latest** inside this tester repository,
+which does not make it a stable Leaf release. The device's update-channel
+setting is what selects the stable or beta repository.
 
 ## Installing
 
