@@ -8,9 +8,10 @@
 > from the main Leaf repo:
 > <https://github.com/Utility-Muffin-Research-Kitchen/Leaf/releases/latest>
 
-Pre-release ("beta") builds of [Leaf](https://github.com/Utility-Muffin-Research-Kitchen/Leaf),
-the custom firmware for the Miniloong Pocket 1, published early so testers can try
-new features and report problems before they reach a stable release.
+Beta tester builds of
+[Leaf](https://github.com/Utility-Muffin-Research-Kitchen/Leaf), the custom
+firmware for the Miniloong Pocket 1, published early so testers can try new
+features and report problems before they reach a stable release.
 
 ## Who this is for
 
@@ -20,15 +21,24 @@ instead.
 
 ## Versioning
 
-Beta builds are tagged `vX.Y.Z-beta.N` (for example `v0.5.0-beta.1`), where `X.Y.Z`
-is the stable release they are working toward. Every build here is marked
-**Pre-release** on GitHub and is never the "Latest" tag, so a semver-aware updater
-always treats a later stable release as newer.
+Beta builds use tags `vX.Y.Z-beta.N` (for example `v0.5.0-beta.1`), where
+`X.Y.Z` is the stable release they are working toward. The full
+`X.Y.Z-beta.N` remains visible on-device, while compatibility checks use the
+`X.Y.Z` core.
+
+Builds here are published as regular GitHub releases—not GitHub
+**Pre-releases**—because Leaf's updater skips prerelease-flagged releases. The
+newest beta is **Latest** within this dedicated tester repository; it is not a
+stable Leaf release. The device's update-channel setting selects the stable or
+beta repository.
 
 ## Installing
 
-Beta builds are **fresh installs** (not over-the-air). Download the SD zip from a
-release below and follow the standard install steps: <https://leaf.game/guide/install/>.
+Beta builds support both fresh installs and over-the-air updates. For a fresh
+install, download the SD zip from a release below and follow the standard
+install steps: <https://leaf.game/guide/install/>. On an existing compatible
+Leaf installation, open **System Update**, set **Update Channel** to **Beta**,
+then check for and install the update.
 
 ## Reporting issues
 
